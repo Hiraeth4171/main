@@ -30,7 +30,7 @@ class Particle {
         ellipse(this.x, this.y, this.r, this.r);
         stroke(230, 230, 230, (this.speed / 5)*255);
         strokeWeight(this.r/this.speed)
-        line(this.x, this.y, this.d == 'right' ? this.x - this.r*3 : this.x + this.r*3, this.y);
+        line(this.x, this.y, this.d == 'right' ? this.x - this.speed*15 : this.x + this.speed*15, this.y);
     }
 }
 
