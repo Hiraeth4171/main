@@ -1,7 +1,7 @@
 let w = window.innerWidth,
 h = window.innerHeight,
 particles = [],
-particleCount = 25;
+particleCount = 15;
 class Particle {
     constructor () {
         this.y = random(0, h);
