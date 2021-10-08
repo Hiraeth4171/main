@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #e8e9e9;
+      }
+
+      .cls-2 {
+        fill: black;
+      }
+
+      .cls-2, .cls-3 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Artboard_1" data-name="Artboard 1">
+    <mask id="shape">
+      <!-- white -->
+      <rect x="210" y="210" width="580" height="580" fill="white" />
+      <!-- black -->
+      <path id="Color_Fill_1" data-name="Color Fill 1" class="cls-2" d="M190,742S445.655,858.705,378,634,621.829,336.864,640,532,423,897,423,897Z"/>
+    </mask>
+    <circle class="cls-1" cx="500" cy="500" r="290" mask="url(#shape)"/>
+    <path id="Color_Fill_4" data-name="Color Fill 4" class="cls-3" d="M565,613s72.25-122.25-11-236S701,512,701,512Z"/>
+    <path id="Color_Fill_2" data-name="Color Fill 2" class="cls-3" d="M660,573s-158.75,93.4-159,165c-0.25,1.13,87.4-107.655,195-78s18-300,18-300Z"/>
+    <path id="Color_Fill_3" data-name="Color Fill 3" class="cls-3" d="M660,573s-158.75,93.4-159,165c-0.25,1.13,87.4-107.655,195-78C743.676,589.493,660,573,660,573ZM512,704L642,473l16,100L513,709Z"/>
+  </g>
+</svg>

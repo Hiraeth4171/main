@@ -165,11 +165,63 @@ p {
     font-weight: 400;
 }
 
+.project {
+    position: relative;
+    width: 20%;
+    height: 30%;
+    margin: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.project-backdrop {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.project-name {
+    position: absolute;
+    background: radial-gradient(#28282880, #282828);
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.project-name:hover {
+    opacity: 0;
+    justify-content: baseline;
+}
+
+.project-name > h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 100%;
+}
+
 #project-list {
+    margin-top: 10px;
     width: 100%;
     height: 79%;
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     font-family: 'Noto Sans Mono', monospace;
 }
