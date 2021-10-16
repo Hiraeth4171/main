@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;300;500;700&family=Poppins:wght@100;200;300;400;600;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #ffdae0;
+    color: #ff9393; 
+    overflow-x: hidden;
+    user-select: none;
+}
+
+#hero-section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+
+a {
+    text-decoration: none;
+    color: #e6e6e6;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+#hero-section > canvas {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -100;
+}
+
+#hero-title {
+    display: flex;
+    flex-direction: row; 
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 200;
+}
+
+::-webkit-scrollbar {
+    background-color: #282828;
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    border-radius: 10px;
+    background-color: #545454;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+p {
+    font-family: 'Noto Sans Mono', monospace;
+    font-weight: 100;
+    color: #000000;
+    /* text-transform: lowercase; */
+    text-align: center;
+    font-size: 12px;
+}
+
+#hero-nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.hero-nav-item:hover {
+    font-weight: 400;
+}
