@@ -7,14 +7,15 @@ USM=1,
 circle,
 sliderusm;
 class Particle {
-    constructor () {
+    constructor (c=false) {
         this.x = random(50, w/2);
-        this.y = random(50, h/2);
+        this.y = c ? this.x : random(50, h/2);
         this.rad = sqrt(2)*this.y;
         this.a = random(0, TWO_PI)
         this.d = round(random(0, 1)) == 0 ? 'right' : 'left';
         this.r = Math.floor(random(5, 15));
         this.speed = random(0.01,0.05);
+
     }
 
     makeCircular () {
@@ -79,7 +80,7 @@ function draw () {
     particleCount = slider.value(); 
     USM = sliderusm.value();
     clear(0);    
-    if (particles.length < particleCount) while(particles.length - particleCount) particles.push(new Particle());
+    if (particles.length < particleCount) while(particles.length - particleCount) particles.push(new Particle(circle.checked()));
     else if (particles.length > particleCount) while(particleCount - particles.length) particles.pop();
     for (let i = 0; i < particles.length; i++) {
         let particle = particles[i];
