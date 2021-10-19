@@ -67,7 +67,7 @@ body {
     opacity: 0.2;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: linear-gradient(transparent 0%, #d79921 50%) 5px;
+    -webkit-text-stroke: #d79921 5px;
     margin-bottom: 20px;
     font-size: 100px;
     color: transparent;
