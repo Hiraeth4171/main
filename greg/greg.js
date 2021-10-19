@@ -18,7 +18,6 @@ class Particle {
     show() {
         fill(215, 153, 33);
         noStroke();
-        // ellipse(this.x, this.y, this.r, this.r);
         drawGradient(this.x,this.y, this.r/2, this.r/2);
         noFill()
         stroke(215, 153, 33, (this.speed / 5) * 255);
@@ -77,8 +76,4 @@ function drawGradient(x, y, r1, r2) {
         
         h+=20;
     }
-}
-
-function delay(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
 }
