@@ -65,7 +65,7 @@ body {
     justify-self: stretch;
     background: linear-gradient(transparent 40%, #d79921 100%);
     opacity: 0.2;
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text; */
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: #d79921 5px;
     margin-bottom: 20px;
