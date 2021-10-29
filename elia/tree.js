@@ -34,6 +34,10 @@ document.addEventListener("click",(e)=> {
     if(e.target.classList.contains("node")) {
         e.target.innerHTML = `<input type="text" id="${e.target.getAttribute("id")}" class="node-textbox" value="${nodes[e.target.getAttribute("id")].name}"></input>`
     }
+    else {
+        if(e.target.outerHTML != e.target.value) e.target.outerHTML = e.target.value
+        if(e.target.value != nodes[e.target.getAttribute("id")]) nodes[e.target.getAttribute("id")].rename(e.target.value);
+    }
 })
 
 document.addEventListener("keydown", (e)=> {
