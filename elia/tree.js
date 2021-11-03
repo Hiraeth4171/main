@@ -19,7 +19,7 @@ class Node {
     }
 }
 
-let first = new Node("boom", -1, "by fucking");
+let first = new Node("hey", -1, "by fucking");
 for (let i = 0; i < 10; i++) {
     new Node(Math.random(), i, i.toString());
     new Node(Math.random(), i, i.toString());
