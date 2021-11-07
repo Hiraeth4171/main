@@ -1,13 +1,24 @@
-let nodes = [];
 let selectedNodeID = -1;
+let cId = 0;
+let mainNode = 0;
 
 class Node {
-    constructor(name, parentID, method) {
+    constructor(name, parent, method, children) {
         this.name = name;
-        this.parentID = parentID;
+        this.parent = parent ? parent : mainNode;
         this.method = method;
-        this.id = nodes.length;
-        nodes.push(this);
+        this.id = parent ? this.parent.children.length : -1;
+        this.children = children;
+        console.log({ t: this, pId: parent});
+        if(parent) parent.addChild(this)
+    }
+
+    addChild(node) {
+        this.children.push(node);
+    }
+
+    removeChild(node) {
+        this.children.map(child => child.id != node.id);
     }
 
     rename(name) {
@@ -19,19 +30,23 @@ class Node {
     }
 }
 
-let first = new Node("hey", -1, "by fucking");
-for (let i = 0; i < 10; i++) {
-    new Node(Math.random(), i, i.toString());
-    new Node(Math.random(), i, i.toString());
-    new Node(Math.random(), i, i.toString());
+mainNode =  new Node("main", null, "brrr", []);
+
+for(let i = 0; i < 3; i++) {
+    let x = new Node(Math.random(), mainNode, i.toString(), []);
+    for(let j = 0; j < 3; j++) {
+        new Node (Math.random(), x, j.toString(), []);
+    }
 }
 
-let render = () => {
-    for (let i = 0; i < nodes.length; i++) {
-        let node = nodes[i];
+
+let render = (node) => {
+    document.getElementById('tree').appendChild(document.createRange().createContextualFragment(node.html(true)));
+
+    node.children.forEach(child => {
         let dest = 'tree';
-        if (node.parentID != -1) {
-            dest = ('row' + node.parentID).toString();
+        if(child.parent.id != -1){
+            dest = ('row'+child.parent.id).toString();
             console.log(dest);
         }
         if (document.getElementById(dest) == null) {
@@ -40,8 +55,9 @@ let render = () => {
             d.setAttribute("class", "node-row")
             document.getElementById('tree').appendChild(d);
         }
-        document.getElementById(dest).appendChild(document.createRange().createContextualFragment(node.html(dest == 'tree' ? true : false)));
-    }
+        document.getElementById(dest).appendChild(document.createRange().createContextualFragment(child.html(dest == 'tree' ? true : false)));
+        if(child.children) render(child);
+    })
 }
 
 
@@ -79,4 +95,4 @@ document.addEventListener("keydown", (e) => {
     }
 })
 
-render();
+render(mainNode);
