@@ -1,7 +1,20 @@
 let toggleCanvas = 1;
-
+// let audio = new Audio('./audio.mp3');
 $(document).ready(async () => {
 
+    // audio.loop = true;
+
+    // $('input[type=range]').on('input', function () {
+    //     $(this).trigger('change');
+    // });
+
+    // $('#audio').change(function (e) { 
+    //     alert('boop')
+    //     audio.volume = $(this).value / 100;
+    // });
+
+    // audio.play()
+    
     $('#ayu').mouseover(function (e) {
         $('#gif').css('opacity', 1);
     });
