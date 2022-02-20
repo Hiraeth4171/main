@@ -14,7 +14,7 @@ $(document).ready(async () => {
     // });
 
     // audio.play()
-    
+
     $('#ayu').mouseover(function (e) {
         $('#gif').css('opacity', 1);
     });
@@ -64,7 +64,7 @@ async function request(url, options) {
     }).then(json => {
         returnValue = json
     }).catch(err => {
-        alert(err)
+        console.log(err);
     })
     return returnValue;
 }
